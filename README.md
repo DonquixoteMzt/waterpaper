@@ -1,6 +1,6 @@
 <h1>WATERPAPER: An End-to-End Research Assistant</h1>
 
-<img src="figure/waterpaper_logo.png" alt="Waterpaper logo" width="600" />
+<img src="figure/waterpaper_logo.png" alt="Waterpaper logo" width="100%" />
 
 Waterpaper, with a minimalist design, automatically transforms your idea into a paper.
 
