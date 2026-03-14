@@ -1,0 +1,57 @@
+# LLMScape Verification Run Configuration
+# Uses smaller grid for faster end-to-end verification
+
+model:
+  name: "Qwen/Qwen3-0.6B-Base"
+  dtype: "bfloat16"
+  attn_implementation: "eager"
+
+data:
+  dataset: "wikitext"
+  dataset_config: "wikitext-2-raw-v1"
+  split: "test"
+  seq_len: 256
+  n_eval_chunks: 50
+  eval_batch_size: 4
+  max_eval_batches: 5
+  n_grad_batches: 100
+  grad_batch_size: 1
+
+grid:
+  size: 21
+  range: 1.0
+  tier3_scale_factor: 3.0
+
+direction:
+  tier2:
+    n_grad_samples: 100
+    convergence_threshold_deg: 5.0
+    checkpoints: [10, 20, 50, 75, 100]
+    k: 2
+  tier3:
+    n_iter: 30
+    n_vectors: 2
+    convergence_tol: 0.9999
+    hvp_max_batches: 3
+    hvp_batch_size: 1
+
+pfi:
+  n_hutchinson: 5
+  hvp_max_batches: 3
+
+tadn_test:
+  n_1d_points: 21
+  scale_factors: [0.125, 0.25, 4.0, 8.0]
+
+baseline:
+  method: "layer_norm"
+
+experiment:
+  seeds: [42]
+  output_dir: "results"
+  save_surfaces: true
+  save_directions: false
+
+hardware:
+  gpu: 0
+  fp32_gpu: 0

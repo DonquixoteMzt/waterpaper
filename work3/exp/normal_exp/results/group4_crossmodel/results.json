@@ -1,0 +1,52 @@
+{
+  "Qwen/Qwen2.5-7B-Instruct": {
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "n_params": 7615616512,
+    "baseline_loss": 2.6135133107503257,
+    "tier1_metrics": {
+      "center_loss": 2.6135133107503257,
+      "loss_min": 2.6135133107503257,
+      "loss_max": 46.477012634277344,
+      "loss_range": 43.863499323527016,
+      "loss_mean": 25.258815691314318,
+      "loss_median": 25.906178792317707,
+      "roughness": 0.7203656043898393,
+      "quad_roughness": 2.921089282830817,
+      "kappa_1": 22.996532094755278,
+      "kappa_2": 33.28402874599584,
+      "curvature_ratio": 0.6909179255366654,
+      "basin_area_fraction": 0.011337868480725623,
+      "basin_diameter": 0.252313252202016,
+      "basin_flatness": 2.605329084396362,
+      "asymmetry_alpha": 1.7353762149810792,
+      "convexity_ratio": 0.5726817042606517,
+      "grid_range": 1.0
+    },
+    "time": 4717.533009052277
+  },
+  "allenai/OLMo-3-7B-Think": {
+    "model": "allenai/OLMo-3-7B-Think",
+    "n_params": 7302430720,
+    "baseline_loss": 10.319785753885904,
+    "tier1_metrics": {
+      "center_loss": 10.319785753885904,
+      "loss_min": 10.319785753885904,
+      "loss_max": 23.685042063395183,
+      "loss_range": 13.36525630950928,
+      "loss_mean": 15.624278411663397,
+      "loss_median": 15.30277156829834,
+      "roughness": 0.3032686668755224,
+      "quad_roughness": 0.533642952768276,
+      "kappa_1": 9.84182957537248,
+      "kappa_2": 10.318008296396602,
+      "curvature_ratio": 0.9538497443071638,
+      "basin_area_fraction": 0.009070294784580499,
+      "basin_diameter": 0.22567583341910255,
+      "basin_flatness": 0.9302380879720054,
+      "asymmetry_alpha": 0.45942897796630844,
+      "convexity_ratio": 0.631578947368421,
+      "grid_range": 1.0
+    },
+    "time": 4743.0
+  }
+}

@@ -1,0 +1,107 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Error while downloading from https://cas-bridge.xethub.hf.co/xet-bridge-us/64f1a7d69d8baeb62eaa1ce4/36b4f299b19dc347a33f59fed3f4ebd1e8734325c68671d64d622fc6ec254406?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20260310%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260310T194531Z&X-Amz-Expires=3600&X-Amz-Signature=a5659aaf5fae3dcf5b3014ff965972f24e51b53fcfc17c50811d96a516d63d8e&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=63329d8740da204b5bdd3a33&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model.safetensors%3B+filename%3D%22model.safetensors%22%3B&x-amz-checksum-mode=ENABLED&x-id=GetObject&Expires=1773175531&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3MzE3NTUzMX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82NGYxYTdkNjlkOGJhZWI2MmVhYTFjZTQvMzZiNGYyOTliMTlkYzM0N2EzM2Y1OWZlZDNmNGViZDFlODczNDMyNWM2ODY3MWQ2NGQ2MjJmYzZlYzI1NDQwNioifV19&Signature=g-llSS9TE0zkQqrohZiuArtk3SUHg5icL5EU48ubp5R1gpEWWmGv%7EMgOCe6iY3LRbekAD%7EOLimOmVssyxs7I48QHPGctoQ5pYfYcVE5-zXQOg1zhJYvPS68IPW9X9ieVoKlbBUG75%7EWFyIGuR2CqED%7Evg7UI5gUUh3Stz3QES1O3M6zDVUey-h8oaFY8oDIAl6Y2OnHiZwQ5hern%7EPftB4WdGTKzmChmT39G60eidyk6VZiqElQAH2h-sG9NBXd-vNUh40F5Cpk5KCubsvSLc5RFv1K8DRZ9IQsuAQFl5MQ3F8FK%7E3ZSRq67phiBTrAxmj4yzkBNn5XfobSuyRdpmQ__&Key-Pair-Id=K2L8F4GPSG1IFC: The read operation timed out
+Trying to resume download...
+======================================================================
+TinyLlama Training Trajectory Visualization (MMSP Method A)
+======================================================================
+
+Step 1: Loading checkpoint parameters...
+  Loading TinyLlama/TinyLlama-1.1B-step-50K-105b...
+Traceback (most recent call last):
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpcore/_sync/http_proxy.py", line 288, in handle_request
+    connect_response = self._connection.handle_request(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/transformers/modeling_utils.py", line 619, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/transformers/utils/hub.py", line 276, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/transformers/utils/hub.py", line 507, in cached_files
+    raise e
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/transformers/utils/hub.py", line 419, in cached_files
+    hf_hub_download(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1032, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1248, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1888, in _download_to_tmp_and_move
+    http_get(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 478, in http_get
+    return http_get(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 412, in http_get
+    with http_stream_backoff(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 591, in http_stream_backoff
+    yield from _http_backoff_base(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in _http_backoff_base
+    with client.stream(method=method, url=url, **kwargs) as response:
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpx/_client.py", line 868, in stream
+    response = self.send(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/leo/waterpaper/work3/exp/normal_exp/run_tinyllama_trajectory.py", line 336, in <module>
+    main()
+  File "/home/leo/waterpaper/work3/exp/normal_exp/run_tinyllama_trajectory.py", line 80, in main
+    model, params = load_tinyllama_checkpoint(ckpt_name)
+  File "/home/leo/waterpaper/work3/exp/normal_exp/run_tinyllama_trajectory.py", line 37, in load_tinyllama_checkpoint
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 374, in from_pretrained
+    return model_class.from_pretrained(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/transformers/modeling_utils.py", line 3996, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "/home/leo/miniconda3/envs/waterpaper/lib/python3.10/site-packages/transformers/modeling_utils.py", line 699, in _get_resolved_checkpoint_files
+    raise OSError(
+OSError: Can't load the model for 'TinyLlama/TinyLlama-1.1B-step-50K-105b'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'TinyLlama/TinyLlama-1.1B-step-50K-105b' is the correct path to a directory containing a file named pytorch_model.bin.

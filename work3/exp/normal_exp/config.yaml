@@ -1,0 +1,68 @@
+# LLMScape Configuration
+# =====================
+
+# Model settings
+model:
+  name: "Qwen/Qwen3-0.6B-Base"
+  dtype: "bfloat16"
+  attn_implementation: "eager"
+
+# Data settings
+data:
+  dataset: "wikitext"
+  dataset_config: "wikitext-2-raw-v1"
+  split: "test"
+  seq_len: 256
+  n_eval_chunks: 50
+  eval_batch_size: 4
+  max_eval_batches: 5
+  n_grad_batches: 200
+  grad_batch_size: 1
+
+# Grid evaluation settings
+grid:
+  size: 51
+  range: 1.0
+  tier3_scale_factor: 3.0  # grid_range = tier3_scale_factor * l_char
+
+# Direction selection settings
+direction:
+  # Tier 2: Gradient Covariance PCA
+  tier2:
+    n_grad_samples: 200
+    convergence_threshold_deg: 5.0
+    checkpoints: [10, 20, 50, 100, 150, 200]
+    k: 2
+  # Tier 3: Power Iteration for Hessian Eigenvectors
+  tier3:
+    n_iter: 30
+    n_vectors: 2
+    convergence_tol: 0.9999
+    hvp_max_batches: 3
+    hvp_batch_size: 1
+
+# PFI settings
+pfi:
+  n_hutchinson: 10
+  hvp_max_batches: 3
+
+# TADN invariance test
+tadn_test:
+  n_1d_points: 31
+  scale_factors: [0.125, 0.25, 4.0, 8.0]
+
+# Baseline settings
+baseline:
+  method: "layer_norm"  # ONE representative baseline: layer normalization
+
+# Experiment settings
+experiment:
+  seeds: [42, 123, 456]
+  output_dir: "results"
+  save_surfaces: true
+  save_directions: false  # directions are large; save metrics only
+
+# Hardware
+hardware:
+  gpu: 0
+  fp32_gpu: 0  # GPU for HVP computation

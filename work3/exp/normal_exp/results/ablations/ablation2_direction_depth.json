@@ -1,0 +1,102 @@
+{
+  "10": {
+    "metrics": {
+      "center_loss": 3.170848560333252,
+      "loss_min": 3.170848560333252,
+      "loss_max": 258.5752471923828,
+      "loss_range": 255.40439863204955,
+      "loss_mean": 102.60493629814808,
+      "loss_median": 99.73113098144532,
+      "roughness": 2.0792406829602643,
+      "quad_roughness": 15.025595689290109,
+      "kappa_1": 136.24586831623745,
+      "kappa_2": 210.28511647613135,
+      "curvature_ratio": 0.6479101830853417,
+      "basin_area_fraction": 0.046826222684703434,
+      "basin_diameter": 0.504626504404032,
+      "basin_flatness": 19.099284057617187,
+      "asymmetry_alpha": 3.469386647542317,
+      "convexity_ratio": 0.560622914349277,
+      "grid_range": 1.0
+    },
+    "explained_variance": [
+      0.16422249251794974,
+      0.14714473998035404
+    ]
+  },
+  "25": {
+    "metrics": {
+      "center_loss": 3.170848560333252,
+      "loss_min": 3.170848560333252,
+      "loss_max": 465.4199157714844,
+      "loss_range": 462.24906721115116,
+      "loss_mean": 141.26491003056347,
+      "loss_median": 118.53955535888672,
+      "roughness": 4.646566036425079,
+      "quad_roughness": 19.396859474994347,
+      "kappa_1": 448.3801388960323,
+      "kappa_2": 109.70400888555298,
+      "curvature_ratio": 4.087180983179833,
+      "basin_area_fraction": 0.1186264308012487,
+      "basin_diameter": 0.80318617766938,
+      "basin_flatness": 30.09761615468745,
+      "asymmetry_alpha": 39.944310429890955,
+      "convexity_ratio": 0.5550611790878754,
+      "grid_range": 1.0
+    },
+    "explained_variance": [
+      0.08766397675506506,
+      0.07948690855723087
+    ]
+  },
+  "50": {
+    "metrics": {
+      "center_loss": 3.170848560333252,
+      "loss_min": 3.170848560333252,
+      "loss_max": 580.2321044921875,
+      "loss_range": 577.0612559318542,
+      "loss_mean": 166.87318432705706,
+      "loss_median": 131.72127838134764,
+      "roughness": 4.789011998697445,
+      "quad_roughness": 31.412988558879512,
+      "kappa_1": 439.9999920779401,
+      "kappa_2": 168.48616024926326,
+      "curvature_ratio": 2.611490412190119,
+      "basin_area_fraction": 0.1571279916753382,
+      "basin_diameter": 0.9243836895888093,
+      "basin_flatness": 40.18132049611072,
+      "asymmetry_alpha": 26.374407679239916,
+      "convexity_ratio": 0.5834260289210234,
+      "grid_range": 1.0
+    },
+    "explained_variance": [
+      0.06955263849945328,
+      0.055981379786132664
+    ]
+  },
+  "100": {
+    "metrics": {
+      "center_loss": 3.170848560333252,
+      "loss_min": 3.170848560333252,
+      "loss_max": 273.7147644042969,
+      "loss_range": 270.54391584396365,
+      "loss_mean": 105.87946970946582,
+      "loss_median": 100.45422668457032,
+      "roughness": 2.242167001375788,
+      "quad_roughness": 10.534001234565288,
+      "kappa_1": 220.99457353083326,
+      "kappa_2": 137.77054505422763,
+      "curvature_ratio": 1.6040770793473131,
+      "basin_area_fraction": 0.030176899063475548,
+      "basin_diameter": 0.40510051864976654,
+      "basin_flatness": 17.627674102783207,
+      "asymmetry_alpha": 18.37452299753825,
+      "convexity_ratio": 0.5511679644048944,
+      "grid_range": 1.0
+    },
+    "explained_variance": [
+      0.05987394841380644,
+      0.04900393632849087
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "model": "Qwen/Qwen3-0.6B-Base",
+  "grid_size": 21,
+  "grid_range": 1.0,
+  "experiments": [
+    {
+      "normalization": "No Normalization",
+      "center_loss": 3.170848560333252,
+      "loss_min": 3.170848560333252,
+      "loss_max": 851.461572265625,
+      "loss_range": 848.2907237052917,
+      "basin_fraction": 0.02040816326530612,
+      "roughness": 9.046721944665544,
+      "asymmetry": 5.106959533691405
+    },
+    {
+      "normalization": "Layer Normalization",
+      "center_loss": 3.170848560333252,
+      "loss_min": 3.170848560333252,
+      "loss_max": 51.25715560913086,
+      "loss_range": 48.08630704879761,
+      "basin_fraction": 0.013605442176870748,
+      "roughness": 0.5952950297845322,
+      "asymmetry": 1.4468108540489564
+    },
+    {
+      "normalization": "TADN",
+      "center_loss": 3.170848560333252,
+      "loss_min": 3.170848560333252,
+      "loss_max": 55.24903945922851,
+      "loss_range": 52.07819089889526,
+      "basin_fraction": 0.018140589569160998,
+      "roughness": 0.643481819733345,
+      "asymmetry": 1.3396706717354907
+    },
+    {
+      "direction": "Gradient Covariance PCA + TADN",
+      "center_loss": 3.170848560333252,
+      "loss_min": 3.170848560333252,
+      "loss_max": 300.97597045898436,
+      "loss_range": 297.8051218986511,
+      "roughness": 3.462940186881824
+    }
+  ],
+  "baseline_loss": 3.170848560333252
+}

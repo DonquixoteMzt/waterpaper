@@ -1,0 +1,269 @@
+{
+  "config": {
+    "model": {
+      "name": "Qwen/Qwen3-0.6B-Base",
+      "dtype": "bfloat16",
+      "attn_implementation": "eager"
+    },
+    "data": {
+      "dataset": "wikitext",
+      "dataset_config": "wikitext-2-raw-v1",
+      "split": "test",
+      "seq_len": 256,
+      "n_eval_chunks": 50,
+      "eval_batch_size": 4,
+      "max_eval_batches": 5,
+      "n_grad_batches": 200,
+      "grad_batch_size": 1
+    },
+    "grid": {
+      "size": 51,
+      "range": 1.0,
+      "tier3_scale_factor": 3.0
+    },
+    "direction": {
+      "tier2": {
+        "n_grad_samples": 200,
+        "convergence_threshold_deg": 5.0,
+        "checkpoints": [
+          10,
+          20,
+          50,
+          100,
+          150,
+          200
+        ],
+        "k": 2
+      },
+      "tier3": {
+        "n_iter": 30,
+        "n_vectors": 2,
+        "convergence_tol": 0.9999,
+        "hvp_max_batches": 3,
+        "hvp_batch_size": 1
+      }
+    },
+    "pfi": {
+      "n_hutchinson": 10,
+      "hvp_max_batches": 3
+    },
+    "tadn_test": {
+      "n_1d_points": 31,
+      "scale_factors": [
+        0.125,
+        0.25,
+        4.0,
+        8.0
+      ]
+    },
+    "baseline": {
+      "method": "layer_norm"
+    },
+    "experiment": {
+      "seeds": [
+        42,
+        123,
+        456
+      ],
+      "output_dir": "results",
+      "save_surfaces": true,
+      "save_directions": false
+    },
+    "hardware": {
+      "gpu": 0,
+      "fp32_gpu": 0
+    }
+  },
+  "experiments": {
+    "tadn_invariance": {
+      "loss_original": 3.170848560333252,
+      "loss_rescaled": 3.170848560333252,
+      "tadn_correlation": 0.9999999999999998,
+      "layer_correlation": 0.91756599142077,
+      "tadn_mse": 0.0,
+      "layer_mse": 28.487620831412645
+    },
+    "pca_convergence": {
+      "10": {
+        "eigenvalues": [
+          998.5548302195011,
+          894.7135596100833
+        ],
+        "explained_ratios": [
+          0.16422249251794974,
+          0.14714473998035404
+        ],
+        "subspace_angle": null
+      },
+      "20": {
+        "eigenvalues": [
+          1254.5305842590844,
+          1137.5693358424644
+        ],
+        "explained_ratios": [
+          0.09832954115348484,
+          0.08916217127518311
+        ],
+        "subspace_angle": 57.7420204315313
+      },
+      "50": {
+        "eigenvalues": [
+          2410.7418705261853,
+          1940.352790804896
+        ],
+        "explained_ratios": [
+          0.06955263849945328,
+          0.055981379786132664
+        ],
+        "subspace_angle": 67.38527524242784
+      },
+      "100": {
+        "eigenvalues": [
+          4301.688064359545,
+          3520.7240142909236
+        ],
+        "explained_ratios": [
+          0.05987394841380644,
+          0.04900393632849087
+        ],
+        "subspace_angle": 53.374453357238444
+      }
+    },
+    "hessian": {
+      "eigenvalues": [
+        14329.313954196177,
+        8297.811693963404
+      ],
+      "l_char": 0.008353862080493669,
+      "tier3_range": 0.025061586241481006
+    },
+    "pfi": {
+      "Tier 1 (Random+TADN)": {
+        "PFI_S": 4.575735461528376e-09,
+        "PFI_C": 2.4534171754843706e-08,
+        "Hd1_sq": 1.1884740678655106,
+        "Hd2_sq": 0.49470550890094334,
+        "d1_curvature": 0.00035155784968132764,
+        "d2_curvature": 0.0002479260687913154,
+        "tr_H2": 367848970.0548035,
+        "tr_H2_std": 89200215.31906773
+      },
+      "Tier 1 (Layer Norm)": {
+        "PFI_S": 1.3721326400942745e-09,
+        "PFI_C": 1.3602965415208258e-08,
+        "Hd1_sq": 0.2167982575721702,
+        "Hd2_sq": 0.28793932086508706,
+        "d1_curvature": 0.00015564840314574724,
+        "d2_curvature": 0.0001949211621425917,
+        "tr_H2": 367848970.0548035,
+        "tr_H2_std": 89200215.31906773
+      },
+      "Tier 2 (Grad PCA+TADN)": {
+        "PFI_S": 3.9085889430854043e-05,
+        "PFI_C": 0.00012760938201202674,
+        "Hd1_sq": 10652.717393458941,
+        "Hd2_sq": 3724.986777356647,
+        "d1_curvature": 1.8285548983512854,
+        "d2_curvature": 0.9824389350396814,
+        "tr_H2": 367848970.0548035,
+        "tr_H2_std": 89200215.31906773
+      },
+      "Tier 3 (Hessian+TADN)": {
+        "PFI_S": 0.00018962021026062845,
+        "PFI_C": 0.0009329491451164521,
+        "Hd1_sq": 47837.39071265358,
+        "Hd2_sq": 21914.20833329388,
+        "d1_curvature": 13.368521203672572,
+        "d2_curvature": 10.165741772347246,
+        "tr_H2": 367848970.0548035,
+        "tr_H2_std": 89200215.31906773
+      }
+    },
+    "surfaces": {
+      "Tier1_TADN": {
+        "center_loss": 3.170848560333252,
+        "loss_min": 3.170848560333252,
+        "loss_max": 55.208430480957034,
+        "loss_range": 52.03758192062378,
+        "loss_mean": 28.70358761116799,
+        "loss_median": 29.07926826477051,
+        "roughness": 0.21891310970978922,
+        "quad_roughness": 1.8871929891523085,
+        "kappa_1": 42.389910359810095,
+        "kappa_2": 39.90850681855081,
+        "curvature_ratio": 1.0621773085230948,
+        "basin_area_fraction": 0.018069973087274125,
+        "basin_diameter": 0.30943111311580196,
+        "basin_flatness": 2.933755211119956,
+        "asymmetry_alpha": 1.7657817611694333,
+        "convexity_ratio": 0.575030012004802,
+        "grid_range": 1.0
+      },
+      "Tier1_LayerNorm": {
+        "center_loss": 3.170848560333252,
+        "loss_min": 3.170848560333252,
+        "loss_max": 51.548448181152345,
+        "loss_range": 48.37759962081909,
+        "loss_mean": 27.607816204938555,
+        "loss_median": 27.966619873046874,
+        "roughness": 0.20880258198403367,
+        "quad_roughness": 1.8589452495326593,
+        "kappa_1": 38.58180889598804,
+        "kappa_2": 36.1440570624186,
+        "curvature_ratio": 1.0674454400415772,
+        "basin_area_fraction": 0.015763168012302962,
+        "basin_diameter": 0.2890060797537427,
+        "basin_flatness": 2.732848957108288,
+        "asymmetry_alpha": 1.7345936527252195,
+        "convexity_ratio": 0.5620248099239696,
+        "grid_range": 1.0
+      },
+      "Tier2_GradPCA": {
+        "center_loss": 3.170848560333252,
+        "loss_min": 3.170848560333252,
+        "loss_max": 273.7147644042969,
+        "loss_range": 270.54391584396365,
+        "loss_mean": 104.52089676990825,
+        "loss_median": 98.51126861572266,
+        "roughness": 1.4641129753739601,
+        "quad_roughness": 10.40470385624571,
+        "kappa_1": 222.77318303366542,
+        "kappa_2": 139.3304246433255,
+        "curvature_ratio": 1.5988839738613205,
+        "basin_area_fraction": 0.03383314109957709,
+        "basin_diameter": 0.42340539427209817,
+        "basin_flatness": 18.56189606731588,
+        "asymmetry_alpha": 18.49951523590088,
+        "convexity_ratio": 0.5458183273309324,
+        "grid_range": 1.0
+      },
+      "Tier3_Hessian": {
+        "center_loss": 3.170848560333252,
+        "loss_min": 3.170848560333252,
+        "loss_max": 34.44694137573242,
+        "loss_range": 31.27609281539917,
+        "loss_mean": 17.88400529080838,
+        "loss_median": 16.93484115600586,
+        "roughness": 0.1983857107703638,
+        "quad_roughness": 3.035487276264299,
+        "kappa_1": 33006.28445988074,
+        "kappa_2": 808.675587971686,
+        "curvature_ratio": 40.81523536856451,
+        "basin_area_fraction": 0.012302960399846213,
+        "basin_diameter": 0.006398800874018306,
+        "basin_flatness": 1.801311545073986,
+        "asymmetry_alpha": 9.395078477859498,
+        "convexity_ratio": 0.555422168867547,
+        "grid_range": 0.025061586241481006
+      }
+    }
+  },
+  "model_info": {
+    "name": "Qwen/Qwen3-0.6B-Base",
+    "n_params": 596049920,
+    "num_heads": 16,
+    "head_dim": 128
+  },
+  "baseline_loss": 3.170848560333252,
+  "total_time_seconds": 20346.199907302856
+}

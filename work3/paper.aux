@@ -1,0 +1,145 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{li2018visualizing,keskar2017on}
+\citation{li2018visualizing}
+\citation{garipov2018loss}
+\citation{foret2021sharpness,liu2023same}
+\citation{li2018visualizing}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{bottcher2024visualizing}
+\citation{goodfellow2015qualitatively}
+\citation{li2018visualizing}
+\citation{xu2024visualizing}
+\citation{ghorbani2019investigation}
+\citation{bottcher2024visualizing}
+\citation{foret2021sharpness}
+\citation{zhang2024why}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{2}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{2}{Related Work}{section.2}{}}
+\citation{chen2025unveiling}
+\citation{liu2023same}
+\citation{kalra2026scalable}
+\citation{garipov2018loss}
+\citation{xia2023training}
+\citation{li2018visualizing}
+\citation{dinh2017sharp}
+\citation{zhang2024why}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overview of the LLMScape framework. Given a model and evaluation data, TADN normalizes perturbation directions at transformer-appropriate granularity (per-head, per-neuron). SHIDS selects directions across three tiers of increasing faithfulness. PFI quantifies the resulting projection quality. The pipeline outputs 2D loss surfaces with geometric metrics. MMSP extends the framework to multi-model comparison via three projection methods.}}{3}{figure.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:overview}{{1}{3}{Overview of the LLMScape framework. Given a model and evaluation data, TADN normalizes perturbation directions at transformer-appropriate granularity (per-head, per-neuron). SHIDS selects directions across three tiers of increasing faithfulness. PFI quantifies the resulting projection quality. The pipeline outputs 2D loss surfaces with geometric metrics. MMSP extends the framework to multi-model comparison via three projection methods}{figure.caption.2}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{3}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{3}{Method}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Preliminaries}{3}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:prelim}{{3.1}{3}{Preliminaries}{subsection.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Transformer-Adapted Direction Normalization (TADN)}{3}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:tadn}{{3.2}{3}{Transformer-Adapted Direction Normalization (TADN)}{subsection.3.2}{}}
+\citation{bottcher2024visualizing}
+\citation{gurari2018gradient}
+\citation{davis1970rotation}
+\citation{pearlmutter1994fast}
+\def\@LN@column{1}
+\newlabel{def:partition}{{1}{4}{Normalization Unit Partition}{definition.1}{}}
+\newlabel{prop:tadn_invariance}{{1}{4}{TADN Scale Invariance}{proposition.1}{}}
+\newlabel{prop:layer_fails}{{2}{4}{}{proposition.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Scalable Hessian-Informed Direction Selection (SHIDS)}{4}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:shids}{{3.3}{4}{Scalable Hessian-Informed Direction Selection (SHIDS)}{subsection.3.3}{}}
+\newlabel{thm:collapse}{{1}{4}{Curvature Collapse; \citealt {bottcher2024visualizing}}{theorem.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Projection Faithfulness Index (PFI)}{4}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:pfi}{{3.4}{4}{Projection Faithfulness Index (PFI)}{subsection.3.4}{}}
+\newlabel{def:pfi_s}{{2}{4}{PFI-S: Spectral Coverage}{definition.2}{}}
+\citation{hutchinson1990stochastic}
+\citation{merity2017pointer}
+\def\@LN@column{1}
+\newlabel{thm:pfi}{{2}{5}{PFI Properties}{theorem.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Multi-Model Shared Projection (MMSP)}{5}{subsection.3.5}\protected@file@percent }
+\newlabel{sec:mmsp}{{3.5}{5}{Multi-Model Shared Projection (MMSP)}{subsection.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Implementation Details}{5}{subsection.3.6}\protected@file@percent }
+\newlabel{sec:implementation}{{3.6}{5}{Implementation Details}{subsection.3.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{5}{section.4}\protected@file@percent }
+\newlabel{sec:experiments}{{4}{5}{Experiments}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Setup}{5}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:setup}{{4.1}{5}{Setup}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Method Validation}{5}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:validation}{{4.2}{5}{Method Validation}{subsection.4.2}{}}
+\citation{loshchilov2019decoupled}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces TADN scale invariance test. (a) 1D cross-sections along TADN-normalized and LayerNorm-normalized directions before and after non-uniform FFN neuron rescaling. TADN cross-sections overlap perfectly (dashed line hidden behind solid); LayerNorm cross-sections diverge. (b) Quantitative comparison: TADN achieves correlation $= 1.000$ and MSE $= 0.0$; LayerNorm correlation $= 0.918$, MSE $= 28.5$.}}{6}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:tadn}{{2}{6}{TADN scale invariance test. (a) 1D cross-sections along TADN-normalized and LayerNorm-normalized directions before and after non-uniform FFN neuron rescaling. TADN cross-sections overlap perfectly (dashed line hidden behind solid); LayerNorm cross-sections diverge. (b) Quantitative comparison: TADN achieves correlation $= 1.000$ and MSE $= 0.0$; LayerNorm correlation $= 0.918$, MSE $= 28.5$}{figure.caption.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Projection Faithfulness Index and 2D loss surface metrics across direction selection tiers for Qwen3-0.6B-Base. Grid: 51$\times $51. PFI-S and PFI-C computed with 10 Hutchinson samples for $\mathrm  {tr}(H^2)$.}}{6}{table.caption.4}\protected@file@percent }
+\newlabel{tab:pfi}{{1}{6}{Projection Faithfulness Index and 2D loss surface metrics across direction selection tiers for Qwen3-0.6B-Base. Grid: 51$\times $51. PFI-S and PFI-C computed with 10 Hutchinson samples for $\mathrm {tr}(H^2)$}{table.caption.4}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Training Trajectory Visualization}{6}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:trajectory}{{4.3}{6}{Training Trajectory Visualization}{subsection.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 2D loss surfaces across three SHIDS tiers for Qwen3-0.6B-Base. (a)~Tier~1 (Random+TADN): isotropic basin, moderate loss range. (b)~Tier~2 (GradPCA+TADN): $5.2\times $ larger loss range, aligned with gradient variance. (c)~Tier~3 (Hessian+TADN): extreme curvature anisotropy (40.8:1) visible at curvature-aware scale ($\pm 0.025$). Each tier reveals qualitatively distinct geometric features. Contours show $\log _{10}(\text  {loss})$; red star marks $\theta ^*$.}}{7}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:surfaces}{{3}{7}{2D loss surfaces across three SHIDS tiers for Qwen3-0.6B-Base. (a)~Tier~1 (Random+TADN): isotropic basin, moderate loss range. (b)~Tier~2 (GradPCA+TADN): $5.2\times $ larger loss range, aligned with gradient variance. (c)~Tier~3 (Hessian+TADN): extreme curvature anisotropy (40.8:1) visible at curvature-aware scale ($\pm 0.025$). Each tier reveals qualitatively distinct geometric features. Contours show $\log _{10}(\text {loss})$; red star marks $\theta ^*$}{figure.caption.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Multi-seed consistency of Tier~1 (Random+TADN) surface metrics for Qwen3-0.6B-Base.}}{7}{table.caption.6}\protected@file@percent }
+\newlabel{tab:consistency}{{2}{7}{Multi-seed consistency of Tier~1 (Random+TADN) surface metrics for Qwen3-0.6B-Base}{table.caption.6}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Post-Training Effect Analysis}{7}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:posttraining}{{4.4}{7}{Post-Training Effect Analysis}{subsection.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Cross-Model Comparison}{7}{subsection.4.5}\protected@file@percent }
+\newlabel{sec:crossmodel}{{4.5}{7}{Cross-Model Comparison}{subsection.4.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces TADN normalization granularity ablation for Qwen3-0.6B-Base (Tier~1, 31$\times $31 grid).}}{8}{table.caption.7}\protected@file@percent }
+\newlabel{tab:tadn_ablation}{{3}{8}{TADN normalization granularity ablation for Qwen3-0.6B-Base (Tier~1, 31$\times $31 grid)}{table.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Training trajectory analysis of Qwen3-0.6B-Base fine-tuned for 500 steps (11 checkpoints). (a)~Trajectory-PCA (MMSP Method A): checkpoints (colored by step) project onto a smooth curved arc in the top-2 PCA plane, overlaid on the loss surface contours. PC1+PC2 capture 87.6\% of trajectory variance. (b)~Training evolution: evaluation loss (left axis) shows rapid initial improvement then plateau; inter-checkpoint parameter distance (right axis) decreases monotonically, indicating convergence.}}{8}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:trajectory}{{4}{8}{Training trajectory analysis of Qwen3-0.6B-Base fine-tuned for 500 steps (11 checkpoints). (a)~Trajectory-PCA (MMSP Method A): checkpoints (colored by step) project onto a smooth curved arc in the top-2 PCA plane, overlaid on the loss surface contours. PC1+PC2 capture 87.6\% of trajectory variance. (b)~Training evolution: evaluation loss (left axis) shows rapid initial improvement then plateau; inter-checkpoint parameter distance (right axis) decreases monotonically, indicating convergence}{figure.caption.8}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Dataset Sensitivity and Robustness}{8}{subsection.4.6}\protected@file@percent }
+\newlabel{sec:dataset}{{4.6}{8}{Dataset Sensitivity and Robustness}{subsection.4.6}{}}
+\citation{chen2025unveiling}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Post-training effect analysis: Qwen3-0.6B-Base vs.\ Qwen3-0.6B (RLHF-aligned). (a,b)~Independent Tier~1 surfaces (MMSP Method C) with matched color scales: the RLHF-aligned model shows a narrower basin (diameter $-23.3\%$) and reduced loss range ($-8.1\%$). (c)~Anchor-point 1D cross-section (MMSP Method B): smooth, barrier-free transition between base and post-trained models; midpoint loss (3.30) lies between endpoints.}}{9}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:posttraining}{{5}{9}{Post-training effect analysis: Qwen3-0.6B-Base vs.\ Qwen3-0.6B (RLHF-aligned). (a,b)~Independent Tier~1 surfaces (MMSP Method C) with matched color scales: the RLHF-aligned model shows a narrower basin (diameter $-23.3\%$) and reduced loss range ($-8.1\%$). (c)~Anchor-point 1D cross-section (MMSP Method B): smooth, barrier-free transition between base and post-trained models; midpoint loss (3.30) lies between endpoints}{figure.caption.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Geometric comparison of fine-tuning (500 steps) vs.\ official RLHF post-training on Qwen3-0.6B.}}{9}{table.caption.10}\protected@file@percent }
+\newlabel{tab:posttraining}{{4}{9}{Geometric comparison of fine-tuning (500 steps) vs.\ official RLHF post-training on Qwen3-0.6B}{table.caption.10}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{9}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{9}{Discussion}{section.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Cross-model landscape metrics using MMSP Method C (Tier~1, TADN, WikiText-2).}}{10}{table.caption.11}\protected@file@percent }
+\newlabel{tab:crossmodel}{{5}{10}{Cross-model landscape metrics using MMSP Method C (Tier~1, TADN, WikiText-2)}{table.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Cross-model comparison of 7B-parameter models using MMSP Method C (Tier~1, TADN). (a)~Qwen2.5-7B-Instruct: instruction-following model with loss range 43.9 and higher roughness (0.72). (b)~OLMo-3-7B-Think: reasoning-focused model with dramatically flatter landscape (loss range 13.4, roughness 0.30). Despite similar parameter counts, different training objectives produce distinct landscape geometries.}}{10}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:crossmodel}{{6}{10}{Cross-model comparison of 7B-parameter models using MMSP Method C (Tier~1, TADN). (a)~Qwen2.5-7B-Instruct: instruction-following model with loss range 43.9 and higher roughness (0.72). (b)~OLMo-3-7B-Think: reasoning-focused model with dramatically flatter landscape (loss range 13.4, roughness 0.30). Despite similar parameter counts, different training objectives produce distinct landscape geometries}{figure.caption.12}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{10}{section.6}\protected@file@percent }
+\newlabel{sec:conclusion}{{6}{10}{Conclusion}{section.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Limitations.}{10}{section*.14}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{bottcher2024visualizing}{{1}{2024}{{B{\"o}ttcher and Wheeler}}{{}}}
+\bibcite{chen2025unveiling}{{2}{2025}{{Chen et~al.}}{{Chen, Dong, Wei, Huang, and Zhang}}}
+\bibcite{davis1970rotation}{{3}{1970}{{Davis and Kahan}}{{}}}
+\bibcite{dinh2017sharp}{{4}{2017}{{Dinh et~al.}}{{Dinh, Pascanu, Bengio, and Bengio}}}
+\bibcite{foret2021sharpness}{{5}{2021}{{Foret et~al.}}{{Foret, Kleiner, Mobahi, and Neyshabur}}}
+\bibcite{garipov2018loss}{{6}{2018}{{Garipov et~al.}}{{Garipov, Izmailov, Podoprikhin, Vetrov, and Wilson}}}
+\bibcite{ghorbani2019investigation}{{7}{2019}{{Ghorbani et~al.}}{{Ghorbani, Krishnan, and Xiao}}}
+\bibcite{goodfellow2015qualitatively}{{8}{2015}{{Goodfellow et~al.}}{{Goodfellow, Vinyals, and Saxe}}}
+\bibcite{gurari2018gradient}{{9}{2018}{{Gur-Ari et~al.}}{{Gur-Ari, Roberts, and Dyer}}}
+\bibcite{hutchinson1990stochastic}{{10}{1990}{{Hutchinson}}{{}}}
+\bibcite{kalra2026scalable}{{11}{2026}{{Kalra et~al.}}{{Kalra, Gagnon-Audet, Gromov, Mediratta, Niu, Miller, and Shvartsman}}}
+\bibcite{keskar2017on}{{12}{2017}{{Keskar et~al.}}{{Keskar, Mudigere, Nocedal, Smelyanskiy, and Tang}}}
+\bibcite{li2018visualizing}{{13}{2018}{{Li et~al.}}{{Li, Xu, Taylor, Studer, and Goldstein}}}
+\bibcite{liu2023same}{{14}{2023}{{Liu et~al.}}{{Liu, Xie, Li, and Ma}}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Dataset sensitivity analysis for Qwen3-0.6B-Base (Tier~1, TADN, 31$\times $31 grid).}}{11}{table.caption.13}\protected@file@percent }
+\newlabel{tab:dataset}{{6}{11}{Dataset sensitivity analysis for Qwen3-0.6B-Base (Tier~1, TADN, 31$\times $31 grid)}{table.caption.13}{}}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {paragraph}{Broader Impact.}{11}{section*.15}\protected@file@percent }
+\bibcite{loshchilov2019decoupled}{{15}{2019}{{Loshchilov and Hutter}}{{}}}
+\bibcite{merity2017pointer}{{16}{2017}{{Merity et~al.}}{{Merity, Xiong, Bradbury, and Socher}}}
+\bibcite{pearlmutter1994fast}{{17}{1994}{{Pearlmutter}}{{}}}
+\bibcite{xia2023training}{{18}{2023}{{Xia et~al.}}{{Xia, Artetxe, Zhou, Lin, Pasunuru, Chen, Zettlemoyer, and Stoyanov}}}
+\bibcite{xu2024visualizing}{{19}{2024}{{Xu et~al.}}{{Xu, Li, Li, and Zhan}}}
+\bibcite{zhang2024why}{{20}{2024}{{Zhang et~al.}}{{Zhang, Conner, Li, Shi, Luo, Li, Li, Bian, and Yao}}}
+\def\@LN@column{1}
+\def\@LN@column{1}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Proof of Proposition~\ref {prop:tadn_invariance}}{13}{appendix.A}\protected@file@percent }
+\newlabel{app:proof_tadn}{{A}{13}{Proof of Proposition~\ref {prop:tadn_invariance}}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Proof of Theorem~\ref {thm:pfi}}{13}{appendix.B}\protected@file@percent }
+\newlabel{app:proof_pfi}{{B}{13}{Proof of Theorem~\ref {thm:pfi}}{appendix.B}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Additional Ablation Results}{13}{appendix.C}\protected@file@percent }
+\newlabel{app:ablations}{{C}{13}{Additional Ablation Results}{appendix.C}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {D}Hessian Eigenvector Analysis}{13}{appendix.D}\protected@file@percent }
+\newlabel{app:hessian}{{D}{13}{Hessian Eigenvector Analysis}{appendix.D}{}}
+\gdef \@abspage@last{13}

@@ -1,0 +1,198 @@
+[
+  {
+    "id": 1,
+    "title": "Visualizing the Loss Landscape of Neural Nets",
+    "expected_venue": "NeurIPS 2018",
+    "arxiv_id": "1712.09913",
+    "status": "UNCONFIRMED",
+    "verification_source": "None",
+    "verified_title": "",
+    "verified_authors": [],
+    "citations": "N/A"
+  },
+  {
+    "id": 2,
+    "title": "Unveiling the Basin-Like Loss Landscape in Large Language Models",
+    "expected_venue": "arXiv preprint 2025",
+    "arxiv_id": "2505.17646",
+    "status": "UNCONFIRMED",
+    "verification_source": "None",
+    "verified_title": "",
+    "verified_authors": [],
+    "citations": "N/A"
+  },
+  {
+    "id": 3,
+    "title": "Visualizing high-dimensional loss landscapes with Hessian directions",
+    "expected_venue": "Journal of Statistical Mechanics 2024",
+    "arxiv_id": "2208.13219",
+    "status": "UNCONFIRMED",
+    "verification_source": "None",
+    "verified_title": "",
+    "verified_authors": [],
+    "citations": "N/A"
+  },
+  {
+    "id": 4,
+    "title": "Loss Surfaces, Mode Connectivity, and Fast Ensembling of DNNs",
+    "expected_venue": "NeurIPS 2018",
+    "arxiv_id": "1802.10026",
+    "status": "UNCONFIRMED",
+    "verification_source": "None",
+    "verified_title": "",
+    "verified_authors": [],
+    "citations": "N/A"
+  },
+  {
+    "id": 5,
+    "title": "Visualizing, Rethinking, and Mining the Loss Landscape of Deep Neural Networks",
+    "expected_venue": "arXiv preprint 2024",
+    "arxiv_id": "2405.12493",
+    "status": "CONFIRMED",
+    "verification_source": "arXiv",
+    "verified_title": "Visualizing, Rethinking, and Mining the Loss Landscape of Deep Neural Networks",
+    "verified_authors": [
+      "Yichu Xu",
+      "Xin-Chun Li",
+      "Lan Li",
+      "De-Chuan Zhan"
+    ],
+    "citations": "N/A"
+  },
+  {
+    "id": 6,
+    "title": "Dissecting Hessian: Understanding Common Structure of Hessian in Neural Networks",
+    "expected_venue": "arXiv preprint 2020",
+    "arxiv_id": "2010.04261",
+    "status": "CONFIRMED",
+    "verification_source": "arXiv",
+    "verified_title": "Dissecting Hessian: Understanding Common Structure of Hessian in Neural Networks",
+    "verified_authors": [
+      "Yikai Wu",
+      "Xingyu Zhu",
+      "Chenwei Wu",
+      "Annie Wang",
+      "Rong Ge"
+    ],
+    "citations": "N/A"
+  },
+  {
+    "id": 7,
+    "title": "Training Trajectories of Language Models Across Scales",
+    "expected_venue": "ACL 2023",
+    "arxiv_id": "2212.09803",
+    "status": "CONFIRMED",
+    "verification_source": "arXiv",
+    "verified_title": "Training Trajectories of Language Models Across Scales",
+    "verified_authors": [
+      "Mengzhou Xia",
+      "Mikel Artetxe",
+      "Chunting Zhou",
+      "Xi Victoria Lin",
+      "Ramakanth Pasunuru",
+      "Danqi Chen",
+      "Luke Zettlemoyer",
+      "Ves Stoyanov"
+    ],
+    "citations": "N/A"
+  },
+  {
+    "id": 8,
+    "title": "Sharpness-Aware Minimization for Efficiently Improving Generalization",
+    "expected_venue": "ICLR 2021",
+    "arxiv_id": "2010.01412",
+    "status": "CONFIRMED",
+    "verification_source": "arXiv",
+    "verified_title": "Sharpness-Aware Minimization for Efficiently Improving Generalization",
+    "verified_authors": [
+      "Pierre Foret",
+      "Ariel Kleiner",
+      "Hossein Mobahi",
+      "Behnam Neyshabur"
+    ],
+    "citations": "N/A"
+  },
+  {
+    "id": 9,
+    "title": "Same Pre-training Loss, Better Downstream: Implicit Bias Matters for Language Models",
+    "expected_venue": "ICML 2023",
+    "arxiv_id": "2210.14199",
+    "status": "CONFIRMED",
+    "verification_source": "arXiv",
+    "verified_title": "Same Pre-training Loss, Better Downstream: Implicit Bias Matters for Language Models",
+    "verified_authors": [
+      "Hong Liu",
+      "Sang Michael Xie",
+      "Zhiyuan Li",
+      "Tengyu Ma"
+    ],
+    "citations": "N/A"
+  },
+  {
+    "id": 10,
+    "title": "A Scalable Measure of Loss Landscape Curvature for Analyzing the Training Dynamics of LLMs",
+    "expected_venue": "arXiv preprint 2026",
+    "arxiv_id": "2601.16979",
+    "status": "CONFIRMED",
+    "verification_source": "arXiv",
+    "verified_title": "A Scalable Measure of Loss Landscape Curvature for Analyzing the Training Dynamics of LLMs",
+    "verified_authors": [
+      "Dayal Singh Kalra",
+      "Jean-Christophe Gagnon-Audet",
+      "Andrey Gromov",
+      "Ishita Mediratta",
+      "Kelvin Niu",
+      "Alexander H Miller",
+      "Michael Shvartsman"
+    ],
+    "citations": "N/A"
+  },
+  {
+    "id": 11,
+    "title": "Qualitatively characterizing neural network optimization problems",
+    "expected_venue": "ICLR 2015",
+    "arxiv_id": "1412.6544",
+    "status": "CONFIRMED",
+    "verification_source": "arXiv",
+    "verified_title": "Qualitatively characterizing neural network optimization problems",
+    "verified_authors": [
+      "Ian J. Goodfellow",
+      "Oriol Vinyals",
+      "Andrew M. Saxe"
+    ],
+    "citations": "N/A"
+  },
+  {
+    "id": 12,
+    "title": "Loss Landscape Degeneracy Drives Stagewise Development in Transformers",
+    "expected_venue": "arXiv preprint / ICML 2024",
+    "arxiv_id": "2402.02364",
+    "status": "CONFIRMED",
+    "verification_source": "arXiv",
+    "verified_title": "Loss Landscape Degeneracy and Stagewise Development in Transformers",
+    "verified_authors": [
+      "Jesse Hoogland",
+      "George Wang",
+      "Matthew Farrugia-Roberts",
+      "Liam Carroll",
+      "Susan Wei",
+      "Daniel Murfet"
+    ],
+    "citations": "N/A"
+  },
+  {
+    "id": 13,
+    "title": "An Investigation into Neural Net Optimization via Hessian Eigenvalue Density",
+    "expected_venue": "ICML 2019",
+    "arxiv_id": "1901.10159",
+    "status": "CONFIRMED",
+    "verification_source": "arXiv",
+    "verified_title": "An Investigation into Neural Net Optimization via Hessian Eigenvalue Density",
+    "verified_authors": [
+      "Behrooz Ghorbani",
+      "Shankar Krishnan",
+      "Ying Xiao"
+    ],
+    "citations": "N/A"
+  }
+]

@@ -1,0 +1,109 @@
+Config files for Qwen/Qwen3-0.6B: done
+Config files for TinyLlama/TinyLlama-1.1B-step-50K-105b: done
+Config files for TinyLlama/TinyLlama-1.1B-intermediate-step-240k-503b: done
+Config files for TinyLlama/TinyLlama-1.1B-intermediate-step-480k-1T: done
+Config files for TinyLlama/TinyLlama-1.1B-intermediate-step-715k-1.5T: done
+Config files for TinyLlama/TinyLlama-1.1B-intermediate-step-955k-token-2T: done
+Waiting for all downloads...
+download_wget.sh: line 74: wait: pid 74833 is not a child of this shell
+download_wget.sh: line 75: wait: pid 74834 is not a child of this shell
+download_wget.sh: line 76: wait: pid 74835 is not a child of this shell
+download_wget.sh: line 77: wait: pid 74837 is not a child of this shell
+download_wget.sh: line 78: wait: pid 74838 is not a child of this shell
+download_wget.sh: line 79: wait: pid 74841 is not a child of this shell
+Downloading: Qwen/Qwen3-0.6B/model.safetensors ...
+Downloading: TinyLlama/TinyLlama-1.1B-step-50K-105b/pytorch_model.bin ...
+Downloading: TinyLlama/TinyLlama-1.1B-intermediate-step-240k-503b/pytorch_model.bin ...
+Downloading: TinyLlama/TinyLlama-1.1B-intermediate-step-955k-token-2T/pytorch_model.bin ...
+Downloading: TinyLlama/TinyLlama-1.1B-intermediate-step-715k-1.5T/pytorch_model.bin ...
+Downloading: TinyLlama/TinyLlama-1.1B-intermediate-step-480k-1T/model.safetensors ...
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help' for more options.
+FAIL: TinyLlama/TinyLlama-1.1B-intermediate-step-715k-1.5T/pytorch_model.bin
+FAIL: TinyLlama/TinyLlama-1.1B-step-50K-105b/pytorch_model.bin
+FAIL: Qwen/Qwen3-0.6B/model.safetensors
+FAIL: TinyLlama/TinyLlama-1.1B-intermediate-step-955k-token-2T/pytorch_model.bin
+FAIL: TinyLlama/TinyLlama-1.1B-intermediate-step-240k-503b/pytorch_model.bin
+FAIL: TinyLlama/TinyLlama-1.1B-intermediate-step-480k-1T/model.safetensors
+All downloads complete!
+/home/leo/waterpaper/work3/exp/normal_exp/models/Qwen_Qwen3-0.6B/:
+total 10348
+drwxrwxr-x 2 leo leo     4096 Mar 11 04:47 .
+drwxrwxr-x 8 leo leo     4096 Mar 11 04:48 ..
+-rw-rw-r-- 1 leo leo      726 Mar 11 04:45 config.json
+-rw-rw-r-- 1 leo leo      239 Mar 11 04:47 generation_config.json
+-rw-rw-r-- 1 leo leo        0 Mar 11 04:47 special_tokens_map.json
+-rw-rw-r-- 1 leo leo     9732 Mar 11 04:47 tokenizer_config.json
+-rw-rw-r-- 1 leo leo 10565027 Mar 11 04:46 tokenizer.json
+-rw-rw-r-- 1 leo leo        0 Mar 11 04:47 tokenizer.model
+
+/home/leo/waterpaper/work3/exp/normal_exp/models/TinyLlama_TinyLlama-1.1B-intermediate-step-240k-503b/:
+total 2316
+drwxrwxr-x 2 leo leo    4096 Mar 11 04:48 .
+drwxrwxr-x 8 leo leo    4096 Mar 11 04:48 ..
+-rw-rw-r-- 1 leo leo     607 Mar 11 04:47 config.json
+-rw-rw-r-- 1 leo leo     129 Mar 11 04:48 generation_config.json
+-rw-rw-r-- 1 leo leo     414 Mar 11 04:48 special_tokens_map.json
+-rw-rw-r-- 1 leo leo     776 Mar 11 04:48 tokenizer_config.json
+-rw-rw-r-- 1 leo leo 1842767 Mar 11 04:48 tokenizer.json
+-rw-rw-r-- 1 leo leo  499723 Mar 11 04:48 tokenizer.model
+
+/home/leo/waterpaper/work3/exp/normal_exp/models/TinyLlama_TinyLlama-1.1B-intermediate-step-480k-1T/:
+total 2316
+drwxrwxr-x 2 leo leo    4096 Mar 11 04:48 .
+drwxrwxr-x 8 leo leo    4096 Mar 11 04:48 ..
+-rw-rw-r-- 1 leo leo     560 Mar 11 04:48 config.json
+-rw-rw-r-- 1 leo leo     129 Mar 11 04:48 generation_config.json
+-rw-rw-r-- 1 leo leo     414 Mar 11 04:48 special_tokens_map.json
+-rw-rw-r-- 1 leo leo     776 Mar 11 04:48 tokenizer_config.json
+-rw-rw-r-- 1 leo leo 1842767 Mar 11 04:48 tokenizer.json
+-rw-rw-r-- 1 leo leo  499723 Mar 11 04:48 tokenizer.model
+
+/home/leo/waterpaper/work3/exp/normal_exp/models/TinyLlama_TinyLlama-1.1B-intermediate-step-715k-1.5T/:
+total 2316
+drwxrwxr-x 2 leo leo    4096 Mar 11 04:48 .
+drwxrwxr-x 8 leo leo    4096 Mar 11 04:48 ..
+-rw-rw-r-- 1 leo leo     560 Mar 11 04:48 config.json
+-rw-rw-r-- 1 leo leo     129 Mar 11 04:48 generation_config.json
+-rw-rw-r-- 1 leo leo     414 Mar 11 04:48 special_tokens_map.json
+-rw-rw-r-- 1 leo leo     776 Mar 11 04:48 tokenizer_config.json
+-rw-rw-r-- 1 leo leo 1842767 Mar 11 04:48 tokenizer.json
+-rw-rw-r-- 1 leo leo  499723 Mar 11 04:48 tokenizer.model
+
+/home/leo/waterpaper/work3/exp/normal_exp/models/TinyLlama_TinyLlama-1.1B-intermediate-step-955k-token-2T/:
+total 1693
+drwxrwxr-x 2 leo leo    4096 Mar 11 04:50 .
+drwxrwxr-x 8 leo leo    4096 Mar 11 04:48 ..
+-rw-rw-r-- 1 leo leo     560 Mar 11 04:48 config.json
+-rw-rw-r-- 1 leo leo     129 Mar 11 04:50 generation_config.json
+-rw-rw-r-- 1 leo leo     414 Mar 11 04:50 special_tokens_map.json
+-rw-rw-r-- 1 leo leo     776 Mar 11 04:50 tokenizer_config.json
+-rw-rw-r-- 1 leo leo 1708026 Mar 11 04:49 tokenizer.json
+-rw-rw-r-- 1 leo leo  499723 Mar 11 04:50 tokenizer.model
+
+/home/leo/waterpaper/work3/exp/normal_exp/models/TinyLlama_TinyLlama-1.1B-step-50K-105b/:
+total 2316
+drwxrwxr-x 2 leo leo    4096 Mar 11 04:47 .
+drwxrwxr-x 8 leo leo    4096 Mar 11 04:48 ..
+-rw-rw-r-- 1 leo leo     607 Mar 11 04:47 config.json
+-rw-rw-r-- 1 leo leo     129 Mar 11 04:47 generation_config.json
+-rw-rw-r-- 1 leo leo     414 Mar 11 04:47 special_tokens_map.json
+-rw-rw-r-- 1 leo leo     776 Mar 11 04:47 tokenizer_config.json
+-rw-rw-r-- 1 leo leo 1842767 Mar 11 04:47 tokenizer.json
+-rw-rw-r-- 1 leo leo  499723 Mar 11 04:47 tokenizer.model
