@@ -13,7 +13,7 @@ Supported AI backends:
     - codex  : OpenAI Codex CLI (npm install -g @openai/codex)
 
 Usage:
-    python run_research.py [--backend claude|codex] [--start-step N] [--work-dir PATH]
+    python run_research.py [--backend claude|codex] [--start-step N] [--end-step N] [--work-dir PATH]
 """
 
 import json
@@ -776,14 +776,15 @@ def check_thresholds(step_num: int, evaluation: dict) -> bool:
 # Main orchestrator
 # ============================================================
 
-def run_research(work_dir: Path, start_step: int = 1):
-    """Main flow: orchestrate execution, evaluation, retries, and fallbacks for 6 steps."""
+def run_research(work_dir: Path, start_step: int = 1, end_step: int = 6):
+    """Main flow: orchestrate execution, evaluation, retries, and fallbacks up to end_step."""
 
     logger = setup_logging(work_dir)
     logger.info("=" * 60)
     logger.info(f"Automated Research Agent started (backend: {Config.BACKEND})")
     logger.info(f"Working directory: {work_dir.resolve()}")
     logger.info(f"Start step: {start_step}")
+    logger.info(f"End step: {end_step}")
     if Config.AI_MODEL:
         logger.info(f"Specified model: {Config.AI_MODEL}")
     logger.info("=" * 60)
@@ -818,7 +819,7 @@ def run_research(work_dir: Path, start_step: int = 1):
     global_fallbacks = 0
     retry_context = ""
 
-    while step <= 6:
+    while step <= end_step:
         logger.info("")
         logger.info("=" * 60)
         logger.info(
@@ -960,7 +961,7 @@ def run_research(work_dir: Path, start_step: int = 1):
     # ---------- Finish ----------
     logger.info("")
     logger.info("=" * 60)
-    if step > 6:
+    if step > end_step:
         logger.info("Research workflow completed successfully!")
     else:
         logger.info(f"Research workflow terminated at step {step}.")
@@ -969,7 +970,7 @@ def run_research(work_dir: Path, start_step: int = 1):
     # List all output files
     logger.info("Output documents:")
     all_outputs = set()
-    for s in range(1, 7):
+    for s in range(1, end_step + 1):
         all_outputs.update(STEP_OUTPUTS.get(s, []))
     # Include dynamic files (figure_*.pdf)
     for f in work_dir.glob("figure_*.pdf"):
@@ -1001,6 +1002,10 @@ def main():
     parser.add_argument(
         "--start-step", type=int, default=1, choices=[1, 2, 3, 4, 5, 6],
         help="Step number to start from (default: 1, for resuming runs)",
+    )
+    parser.add_argument(
+        "--end-step", type=int, default=6, choices=[1, 2, 3, 4, 5, 6],
+        help="Step number to end at (default: 6)",
     )
     parser.add_argument(
         "--model", type=str, default=None,
@@ -1046,6 +1051,8 @@ def main():
         help="Extra directory to expose to Codex via --add-dir (repeatable)",
     )
     args = parser.parse_args()
+    if args.end_step < args.start_step:
+        parser.error("--end-step must be greater than or equal to --start-step")
 
     Config.BACKEND = args.backend
     if args.model:
@@ -1058,7 +1065,7 @@ def main():
     Config.CODEX_EXTRA_DIRS = [Path(p).resolve() for p in args.codex_add_dir]
 
     work_dir = Path(args.work_dir).resolve()
-    run_research(work_dir, start_step=args.start_step)
+    run_research(work_dir, start_step=args.start_step, end_step=args.end_step)
 
 
 if __name__ == "__main__":
